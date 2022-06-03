@@ -5,4 +5,5 @@ export default defineNuxtConfig({
   runtimeConfig: {
     themoviedbKey: "",
   },
+  modules: ["@vuestic/nuxt"],
 });
