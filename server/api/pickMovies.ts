@@ -15,10 +15,15 @@ export default defineEventHandler((event): TrendingMoviesResponse => {
   const query = useQuery(event);
   console.log(Number(query.rank) / 10);
 
+  console.log(query.providers);
+  const providers = Array.isArray(query.providers)
+    ? query.providers.join("|")
+    : query.providers;
+
   const opt = {
     "with_runtime.gte": query.min,
     "with_runtime.lte": query.max,
-    with_watch_providers: query.providers,
+    with_watch_providers: providers,
     "vote_average.gte": Number(query.rank) / 10,
     with_genres: query.genders,
   };

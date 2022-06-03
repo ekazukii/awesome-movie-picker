@@ -36,4 +36,8 @@ const handleClick = (provId: string) => {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
 }
+
+.ctn input {
+  margin-right: 5px;
+}
 </style>

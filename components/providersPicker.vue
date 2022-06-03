@@ -47,6 +47,7 @@ const handleClick = (provIds: number[]) => {
 }
 
 img {
+  box-sizing: content-box;
   width: 100px;
   height: 100px;
 }
