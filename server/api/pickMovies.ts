@@ -13,12 +13,12 @@ type TrendingMoviesResponse = {
 
 export default defineEventHandler((event): TrendingMoviesResponse => {
   const query = useQuery(event);
-  console.log(Number(query.rank) / 10);
 
-  console.log(query.providers);
   const providers = Array.isArray(query.providers)
     ? query.providers.join("|")
     : query.providers;
+
+  const region = query.region;
 
   const opt = {
     "with_runtime.gte": query.min,
@@ -28,14 +28,12 @@ export default defineEventHandler((event): TrendingMoviesResponse => {
     with_genres: query.genders,
   };
 
-  console.log(opt);
-
   const result: any = $fetch("https://api.themoviedb.org/3/discover/movie", {
     params: {
       api_key: process.env.NUXT_THEMOVIEDB_KEY,
-      language: "fr-FR",
-      region: "FR",
-      watch_region: "FR",
+      language: region === "FR" ? "fr_FR" : "en_US",
+      region: region,
+      watch_region: region,
       sort_by: "popularity.desc",
       include_adult: false,
       page: 1,

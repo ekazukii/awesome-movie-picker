@@ -13,6 +13,7 @@
         <va-navbar-item>Movie Picker</va-navbar-item>
       </template>
       <template #right>
+        <RegionPicker class="mr10" />
         <va-navbar-item>
           <a class="mr10" href="http://github.com/ekazukii" target="_blank"
             >Github</a

@@ -63,6 +63,7 @@
 
 <script lang="ts" setup>
 const rank = ref(0);
+const region = useState("region");
 const data = reactive({
   genders: [],
   providers: [],
@@ -82,6 +83,7 @@ const search = async () => {
       min: data.runtime.min,
       max: data.runtime.max,
       rank: rank.value,
+      region: region.value,
     },
   });
 
