@@ -1,11 +1,13 @@
 <template>
   <div>
-    <h1 class="display-1">Populaire cette semaine</h1>
+    <h1 class="display-1">{{ i18n[lang].weekTrending }}</h1>
     <MovieDisplay v-if="data?.results?.length > 0" :movies="data?.results" />
   </div>
 </template>
 
 <script lang="ts" setup>
+const i18n = useI18n();
+const lang = useLang();
 definePageMeta({
   canonical: "trending",
 });

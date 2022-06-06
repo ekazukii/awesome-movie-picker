@@ -1,12 +1,12 @@
 <template>
   <select name="region" id="region" v-model="region">
-    <option value="FR" selected>🇫🇷</option>
-    <option value="US">🇺🇸</option>
+    <option value="FR" v-bind:selected="region == 'FR'">🇫🇷</option>
+    <option value="US" v-bind:selected="region == 'US'">🇺🇸</option>
   </select>
 </template>
 
 <script setup>
-const region = useState("region", () => "FR");
+const region = useLang();
 </script>
 
 <style>

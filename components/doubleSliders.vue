@@ -1,5 +1,15 @@
 <template>
-  <p>Le film dure de {{ minTime }} à {{ maxTime }}</p>
+  <p>
+    {{
+      i18n[lang].duringFrom +
+      " " +
+      minTime +
+      " " +
+      i18n[lang].to +
+      " " +
+      maxTime
+    }}
+  </p>
   <div class="range-slider">
     <input
       type="range"
@@ -19,6 +29,8 @@
 </template>
 
 <script setup>
+const i18n = useI18n();
+const lang = useLang();
 const { movies } = defineProps({
   min: Number,
   max: Number,

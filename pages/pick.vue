@@ -1,10 +1,10 @@
 <template>
   <div class="page-ctn">
-    <h1>Découvrez de nouveaux films</h1>
+    <h1>{{ i18n[lang].discover }}</h1>
 
     <div id="form-pick">
       <div>
-        <label>Je veux un film :</label>
+        <label>{{ i18n[lang].movieTypeSelect }}</label>
         <CustomCheckbox
           :data="$getAllGenders()"
           @change="(d) => (data.genders = d)"
@@ -16,15 +16,14 @@
       </div>
 
       <div>
-        <label for="">Sur les plateformes : </label>
+        <label for="">{{ i18n[lang].movieProvidersSelect }}</label>
         <ProvidersPicker @change="(p) => (data.providers = p)" />
       </div>
 
       <div id="rank-slider">
-        <label for="score" id="rank-label"
-          >Avec un score au dessus de
-          {{ String(rank).padStart(3, "0") }} %</label
-        >
+        <label for="score" id="rank-label">
+          {{ i18n[lang].rankAbove }} {{ String(rank).padStart(3, "0") }} %
+        </label>
         <br />
         <input
           type="range"
@@ -51,7 +50,9 @@
       </div>
 
       <div id="submit-center">
-        <button id="submit-pick" @click="search">Chercher les films</button>
+        <button id="submit-pick" @click="search">
+          {{ i18n[lang].searchSubmit }}
+        </button>
       </div>
     </div>
 
@@ -65,9 +66,11 @@
 definePageMeta({
   canonical: "pick",
 });
+const i18n = useI18n();
+const lang = useLang();
 
 const rank = ref(0);
-const region = useState("region");
+const region = useLang();
 const data = reactive({
   genders: [],
   providers: [],
