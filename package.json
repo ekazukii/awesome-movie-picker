@@ -11,6 +11,9 @@
   "devDependencies": {
     "nuxt": "3.0.0-rc.3"
   },
+  "engines": {
+    "node": ">=16.15.0"
+  },
   "dependencies": {
     "@vuestic/nuxt": "^1.0.2"
   }
