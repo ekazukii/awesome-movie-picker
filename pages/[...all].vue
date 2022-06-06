@@ -1,9 +1,13 @@
 <template>
-  <h1 class="display-1">Populaire cette semaine</h1>
-  <MovieDisplay v-if="data?.results?.length > 0" :movies="data?.results" />
+  <div>
+    <h1 class="display-1">Populaire cette semaine</h1>
+    <MovieDisplay v-if="data?.results?.length > 0" :movies="data?.results" />
+  </div>
 </template>
 
 <script lang="ts" setup>
+definePageMeta({});
+
 const { data } = await useFetch("/api/getTrendingMovies", {
   pick: ["results"],
 });
