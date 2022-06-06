@@ -26,7 +26,61 @@
   </div>
 </template>
 
-<script></script>
+<script setup>
+useHead({
+  title: "Awesome Movie Picker",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Découvrez des nouveaux films tout les soirs, et choisissez ceux qui vous plairont le plus en fonction des plateformes de streaming que vous utilisez.",
+    },
+    {
+      name: "og:type",
+      content: "website",
+    },
+    {
+      name: "og:title",
+      content: "Awesome Movie Picker",
+    },
+    {
+      name: "og:description",
+      content:
+        "Découvrez des nouveaux films tout les soirs, et choisissez ceux qui vous plairont le plus en fonction des plateformes de streaming que vous utilisez.",
+    },
+    {
+      name: "og:url",
+      content: "https://amp.ekazuki.fr",
+    },
+    {
+      name: "og:image",
+      content: "https://ekazuki.fr/logo.png",
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "Awesome Movie Picker",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Découvrez des nouveaux films tout les soirs, et choisissez ceux qui vous plairont le plus en fonction des plateformes de streaming que vous utilisez.",
+    },
+    {
+      name: "twitter:image",
+      content: "https://ekazuki.fr/logo.png",
+    },
+    {
+      name: "twitter:url",
+      content: "https://amp.ekazuki.fr",
+    },
+  ],
+});
+</script>
+
 <style scoped>
 .mr10 {
   margin-right: 10px;
