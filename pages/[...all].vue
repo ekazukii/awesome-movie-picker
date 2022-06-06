@@ -6,7 +6,9 @@
 </template>
 
 <script lang="ts" setup>
-definePageMeta({});
+definePageMeta({
+  canonical: "trending",
+});
 
 const { data } = await useFetch("/api/getTrendingMovies", {
   pick: ["results"],

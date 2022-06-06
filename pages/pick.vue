@@ -62,6 +62,10 @@
 </template>
 
 <script lang="ts" setup>
+definePageMeta({
+  canonical: "pick",
+});
+
 const rank = ref(0);
 const region = useState("region");
 const data = reactive({

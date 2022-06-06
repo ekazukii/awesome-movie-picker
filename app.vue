@@ -27,8 +27,16 @@
 </template>
 
 <script setup>
+const route = useRoute();
 useHead({
   title: "Awesome Movie Picker",
+  link: [
+    {
+      hid: "canonical",
+      rel: "canonical",
+      href: `https://amp.ekazuki.fr/${route.meta.canonical}`,
+    },
+  ],
   meta: [
     {
       name: "description",
