@@ -1,42 +1,19 @@
-# Nuxt 3 Minimal Starter
+# Awesome Movie Picker
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+Choose a movie to watch tonight based on the streaming platforms you have, the type of movie you want to watch and the length of the movie. You can also check which movies are popular at the moment to go see at the cinema
 
-## Setup
+Check the [website here](https://amp.ekazuki.fr)
+There is also a mobile app written with flutter, you can check it [here](https://github.com/ekazukii/movie-picker-flutter)
 
-Make sure to install the dependencies:
+Currently the website supports only english and french movie search but I will try to add more languages soon.
+
+You can also clone the project locally
 
 ```bash
-# yarn
-yarn install
-
-# npm
+git clone git@github.com:ekazukii/awesome-movie-picker.git
+cd awesome-movie-picker
 npm install
-
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
 npm run dev
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+This project was created to learn more about the new version of NuxtJS (3.0), and about mobile programming using flutter.
