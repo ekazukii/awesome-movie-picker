@@ -26,4 +26,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: home.ekazuki.fr/awesome-movie-polygon:latest
+          tags: home.ekazuki.fr/awesome-movie-picker:latest
